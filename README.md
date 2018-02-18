@@ -1,7 +1,8 @@
 # ZSH_Config
 My Zsh Config
 
-![](https://github.com/HipHopCoderS/ZSH_Config/master/.zsh_demo.png)
+![](https://github.com/HipHopCoderS/ZSH_Config/blob/master/.zsh_demo.png)
+
 
 ### Require:
 1. Install oh my zsh
@@ -11,9 +12,9 @@ My Zsh Config
 
 
 ### Reference
-[powerlevel9k](https://github.com/bhilburn/powerlevel9k)
-[powerline](http://powerline.readthedocs.io/en/master/installation/linux.html)
-[Nerd Font](https://nerdfonts.com/#home)
+[powerlevel9k](https://github.com/bhilburn/powerlevel9k)  
+[powerline](http://powerline.readthedocs.io/en/master/installation/linux.html)  
+[Nerd Font](https://nerdfonts.com/#home)  
 
 
 Simple and beautiful O(∩_∩)O~

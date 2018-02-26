@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/name/.oh-my-zsh
+export TERM="xterm-256color"
+export ZSH=/Users/baidu/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -53,7 +54,11 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python  vi-mode copydir copyfile)
+plugins=(git python vi-mode copydir  copyfile)
+
+# autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -73,8 +78,8 @@ export ANDROID_HOME
 export PATH=$PATH:.:$JAVA_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:
 
 # ShadowSocks
-export http_proxy=http://127.0.0.1:1087;
-export https_proxy=http://127.0.0.1:1087;
+#export http_proxy=http://127.0.0.1:1087;
+#export https_proxy=http://127.0.0.1:1087;
 
 # Brew
 export HOMEBREW_GITHUB_API_TOKEN="";
@@ -82,6 +87,9 @@ export HOMEBREW_GITHUB_API_TOKEN="";
 # Hexo_Algolia
 export HEXO_ALGOLIA_INDEXING_KEY=
 
+# The Fuck
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+eval $(thefuck --alias)
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -132,9 +140,11 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=""
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon  time  dir dir_writable todo vcs )
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon   time  dir dir_writable todo vcs )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status  command_execution_time  vi_mode)
 
+POWERLEVEL9K_OS_ICON_FOREGROUND='white'
+POWERLEVEL9K_OS_ICON_BACKGROUND='black'
 POWERLEVEL9K_TIME_FOREGROUND='black'
 POWERLEVEL9K_TIME_BACKGROUND='blue'
 POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M:%S}"

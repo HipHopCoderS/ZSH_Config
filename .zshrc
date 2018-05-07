@@ -54,7 +54,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python vi-mode copydir  copyfile)
+plugins=(git python vi-mode copydir  copyfile autojump)
 
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
@@ -69,6 +69,11 @@ export PATH="/usr/local/bin:$PATH"
 #JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
 JAVA_HOME=`/usr/libexec/java_home`
 CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+# Go Home
+export GOROOT=/usr/local/Cellar/go/1.10/libexec
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Android Home
 ANDROID_HOME=/usr/local/Cellar/android-sdk/24.4.1_1
@@ -121,18 +126,15 @@ eval $(thefuck --alias)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias todo='todo.sh -d ~/.todo.cfg'
 
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
 
 # npm taobao
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
 --disturl=https://npm.taobao.org/dist \
---userconfig=$HOME/.cnpmrc" 
+--userconfig=$HOME/.cnpmrc"
 
-
+alias tmux="tmux -2"
 
 
 # Powerlevel9k

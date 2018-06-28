@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
-export ZSH=/Users/rapcoder/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -67,8 +67,8 @@ export PATH="/usr/local/bin:$PATH"
 
 # Java Home
 #JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
-JAVA_HOME=`/usr/libexec/java_home`
-CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+#JAVA_HOME=`/usr/libexec/java_home`
+#CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 # Go Home
 export GOROOT=/usr/local/Cellar/go/1.10/libexec
@@ -94,8 +94,8 @@ export HOMEBREW_GITHUB_API_TOKEN="";
 export HEXO_ALGOLIA_INDEXING_KEY=
 
 # The Fuck
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-eval $(thefuck --alias)
+#export PATH="/usr/local/opt/sqlite/bin:$PATH"
+#eval $(thefuck --alias)
 
 
 # export MANPATH="/usr/local/man:$MANPATH"

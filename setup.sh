@@ -17,16 +17,16 @@ else
     echo "themes install success!"
 fi
 
+
+# install plugin
+if [[  ! -d  $omz/custom/themes/powerlevel9k ]];then
+    git clone https://github.com/zsh-users/zsh-autosuggestions $omz/plugins/zsh-autosuggestions
+fi
+
 cp ./.zshrc   ~/.zshrc
 cp ./.tmux.conf   ~/.tmux.conf
 cp ./.todo.cfg   ~/.todo.cfh
-sed -i 's/oh-my-zsh-path/$HOME/g'  ~/.zshrc
-
 source ~/.zshrc
-
-
-
-
 
 
 

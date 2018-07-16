@@ -17,8 +17,8 @@ else
 fi
 
 # install plugin
-if [[  ! -d  $omz/custom/themes/powerlevel9k ]];then
-    git clone https://github.com/zsh-users/zsh-autosuggestions $omz/plugins/zsh-autosuggestions
+if [[  ! -d  $omz/custom/plugins/zsh-autosuggestions ]];then
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
 
 cp ./.zshrc   ~/.zshrc

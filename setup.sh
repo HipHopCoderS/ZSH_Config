@@ -10,7 +10,7 @@ printResult(){
     fi
 }
 
-install_autojump(gbar  打开/关闭标签浏览){
+install_autojump(){
     if [[ $1 -eq 0 ]]; then
         git clone git://github.com/wting/autojump.git
     fi

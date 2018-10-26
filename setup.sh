@@ -10,6 +10,18 @@ printResult(){
     fi
 }
 
+install_autojump(gbar  打开/关闭标签浏览){
+    if [[ $1 -eq 0 ]]; then
+        git clone git://github.com/wting/autojump.git
+    fi
+
+    cd ./autojump
+    ./install.py
+    printResult 0 autojump
+    cd ../
+
+}
+
 echo "oh-my-sh install begin ####"
 # install for oh-my-zsh
 if [[ ! -e  $omz/oh-my-zsh.sh ]];then
@@ -32,19 +44,16 @@ fi
 # install plugin
 if [[  ! -d  $omz/custom/plugins/zsh-autosuggestions ]];then
     git clone https://github.com/zsh-users/zsh-autosuggestions $omz/custom/plugins/zsh-autosuggestions
-    printResult 0 plugin-zutosuggestions 
+    printResult 0 plugin-zutosuggestions
 else
-    printResult 0 plugin-zutosuggestions 
+    printResult 0 plugin-zutosuggestions
 fi
 
 
 if [[ ! -d ./autojump ]];then
-    git clone git://github.com/wting/autojump.git
+    install_autojump 0
 else
-    cd ./autojump
-    ./install.py
-    printResult 0 autojump 
-    cd ../
+    install_autojump 1
 fi
 
 cp -r -f ./.zshrc   ~/.zshrc

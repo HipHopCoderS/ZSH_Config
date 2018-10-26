@@ -57,7 +57,8 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(git python vi-mode copydir  copyfile autojump zsh-autosuggestions)
 
 # autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
 
 
 source $ZSH/oh-my-zsh.sh
@@ -149,8 +150,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status  command_execution_time  vi_mode)
 
 POWERLEVEL9K_OS_ICON_FOREGROUND='white'
 POWERLEVEL9K_OS_ICON_BACKGROUND='black'
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='green'
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='black'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='green'
 POWERLEVEL9K_TIME_FOREGROUND='black'
 POWERLEVEL9K_TIME_BACKGROUND='blue'
 # POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M:%S}"

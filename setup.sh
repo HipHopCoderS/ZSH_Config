@@ -10,17 +10,6 @@ printResult(){
     fi
 }
 
-install_autojump(){
-    if [[ $1 -eq 0 ]]; then
-        git clone git://github.com/wting/autojump.git
-    fi
-
-    cd ./autojump
-    ./install.py
-    printResult 0 autojump
-    cd ../
-
-}
 
 echo "oh-my-sh install begin ####"
 # install for oh-my-zsh
@@ -49,16 +38,11 @@ else
     printResult 0 plugin-zutosuggestions
 fi
 
-
-if [[ ! -d ./autojump ]];then
-    install_autojump 0
-else
-    install_autojump 1
-fi
+i
 
 cp -r -f ./.zshrc   ~/.zshrc
 cp -r -f ./.tmux.conf   ~/.tmux.conf
-cp -r -f ./.todo.cfg   ~/.todo.cfh
+cp -r -f ./.todo.cfg   ~/.todo.cfg
 source ~/.zshrc
 echo "oh-my-sh install end ####"
 

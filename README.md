@@ -7,14 +7,17 @@ My Zsh Config
 ### Require:
 1. Install oh my zsh
 2. Install git
-3. Install Powerline Font or Nerd Font icon
-4. Install powerlevel9k for zsh theme
+3. Suggest install  SauceCodePro Nerd Font icon 
+4. Suggest iterm2 
+
+Then execute setup.sh
 
 
 ### Reference
 [powerlevel9k](https://github.com/bhilburn/powerlevel9k)  
-[powerline](http://powerline.readthedocs.io/en/master/installation/linux.html)  
 [Nerd Font](https://nerdfonts.com/#home)  
+[Iterm2](https://iterm2.com/)
+
 
 
 Simple and beautiful O(∩_∩)O~
